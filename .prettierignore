@@ -1,0 +1,45 @@
+.angular/
+.idea/
+.gradle/
+.vscode/
+android/
+ios/
+coverage/
+dist/
+node_modules/
+storybook-static/
+
+e2e/output/
+e2e/node_modules/
+e2e/environments/images/
+e2e/mochawesome-report/
+e2e/environments/properties.sh
+e2e/**/*.feature
+
+src/.well-known/
+src/app/generated/
+src/assets/
+!src/assets/i18n/
+
+# not supported format
+*.java
+*.sh
+*.xml
+*.txt
+*.iml
+*.properties
+
+# image file
+*.ico
+*.svg
+
+# specific file
+.browserslistrc
+.DS_Store
+.editorconfig
+.firebaserc
+.gitignore
+.prettierignore
+.npmrc
+.nvmrc
+documentation.json

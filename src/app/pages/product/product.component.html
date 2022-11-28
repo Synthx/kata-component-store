@@ -1,0 +1,18 @@
+<div class="product-page">
+    <app-product-header></app-product-header>
+    <ng-container *ngIf="(showFavoriteProducts$ | async) === false; else favoriteProductsGrid">
+        <div class="product-page-title" *ngIf="totalProducts$ | async as totalProduct">{{ totalProduct }} Articles</div>
+        <div class="product-page-grid">
+            <app-product-card [product]="product" *ngFor="let product of products$ | async"></app-product-card>
+        </div>
+        <div class="product-page-loader" *ngIf="loading$ | async">
+            <mat-spinner color="primary" [diameter]="40"></mat-spinner>
+        </div>
+        <app-product-footer></app-product-footer>
+    </ng-container>
+    <ng-template #favoriteProductsGrid>
+        <div class="product-page-grid">
+            <app-product-card [product]="product" *ngFor="let product of favoriteProducts$ | async"></app-product-card>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,19 @@
+.product-page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .product-page-header-input {
+        flex: 1;
+        height: 45px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: left;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background: #f3f3f5;
+        color: #040037;
+        margin-right: 24px;
+    }
+}

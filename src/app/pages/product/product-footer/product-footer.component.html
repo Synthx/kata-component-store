@@ -1,0 +1,8 @@
+<div class="product-page-footer" *ngIf="remainingProducts$ | async as remainingProducts">
+    <div class="product-page-footer-show_more">
+        Il vous reste {{ remainingProducts }} articles à découvrir. Cliquez-ci dessous pour en charger plus.
+    </div>
+    <button mat-flat-button class="product-page-footer-button" color="primary" type="button" (click)="loadMore()">
+        Voir plus d'articles
+    </button>
+</div>

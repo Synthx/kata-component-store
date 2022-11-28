@@ -1,0 +1,24 @@
+<a class="product-card" target="_blank">
+    <div class="product-card-image-wrapper">
+        <img
+            class="product-card-image"
+            loading="lazy"
+            src="https://pictures.secondemain.kiabi.com/{{ product.pictures[0]?.fileName }}"
+            [alt]="product.label"
+        />
+        <button mat-icon-button type="button" class="product-card-favorite-button" (click)="toggleFavorite()">
+            <mat-icon style="color: red" *ngIf="isFavorite$ | async; else addToFavoriteIcon">favorite</mat-icon>
+            <ng-template #addToFavoriteIcon>
+                <mat-icon class="material-icons-outlined">favorite_border</mat-icon>
+            </ng-template>
+        </button>
+    </div>
+    <div class="product-card-information">
+        <div class="product-card-information-title">
+            {{ product.label }}
+        </div>
+        <div class="product-card-information-price">
+            {{ product.price | currency }}
+        </div>
+    </div>
+</a>
